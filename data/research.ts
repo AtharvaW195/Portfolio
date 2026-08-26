@@ -9,19 +9,6 @@ export interface ResearchItem {
 }
 
 export const research: ResearchItem[] = [
-{
-    title: 'Solar Energy Generation Prediction using Deep Learning',
-    meta: 'Published Research | Status: Completed — Published at SETCOM 2025',
-    bullets: [
-      'Developed and compared LSTM, GRU, and MLP models in TensorFlow to forecast photovoltaic energy generation using ~13,000 historical observations.',
-      'Reduced feature space from 28 to 15 features using Sequential Forward Selection while maintaining predictive performance.',
-      'Achieved best performance with an MLP model (MAE: 0.0244) and published findings at SETCOM 2025.'
-    ],
-    status: 'Completed — Published at SETCOM 2025',
-    tags: ['Deep Learning', 'Time-Series Forecasting', 'TensorFlow', 'Applied ML'],
-    slug: 'solar-energy-generation-prediction-deep-learning'
-   },
-    
   {
     title: 'LLM-Generated Software Tests',
     meta: 'Independent Study | Supervisor: Ed Gehringer | Status: Ongoing',
@@ -40,5 +27,16 @@ export const research: ResearchItem[] = [
     tags: ['GenAI', 'LLMs', 'Agents', 'Software Evolution'],
     slug: 'software-evolution-generative-ai'
   },
-  
+  {
+    title: 'Solar Energy Generation Prediction using Deep Learning',
+    meta: 'Published Research | Status: Completed — Published at SETCOM 2025',
+    bullets: [
+      'Developed and compared LSTM, GRU, and MLP models in TensorFlow to forecast photovoltaic energy generation using ~13,000 historical observations.',
+      'Reduced feature space from 28 to 15 features using Sequential Forward Selection while maintaining predictive performance.',
+      'Achieved best performance with an MLP model (MAE: 0.0244) and published findings at SETCOM 2025.'
+    ],
+    status: 'Completed — Published at SETCOM 2025',
+    tags: ['Deep Learning', 'Time-Series Forecasting', 'TensorFlow', 'Applied ML'],
+    slug: 'solar-energy-generation-prediction-deep-learning'
+  },
 ];

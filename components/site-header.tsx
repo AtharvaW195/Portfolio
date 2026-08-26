@@ -30,9 +30,9 @@ export function SiteHeader() {
   const isActive = (href: string) => pathname === href;
 
   return (
-    <header className="sticky top-0 z-50 border-b border-zinc-200 bg-white/95 backdrop-blur">
+    <header className="sticky top-0 z-50 border-b border-border bg-surface">
       <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
-        <Link href="/" className="text-sm font-medium tracking-wide text-zinc-950">
+        <Link href="/" className="text-sm font-medium tracking-wide text-primary">
           Atharva Waingankar
         </Link>
 
@@ -41,9 +41,10 @@ export function SiteHeader() {
             <Link
               key={item.href}
               href={item.href}
+              aria-current={isActive(item.href) ? 'page' : undefined}
               className={[
-                'rounded-md px-3 py-2 text-sm transition-colors',
-                isActive(item.href) ? 'text-zinc-950' : 'text-zinc-600 hover:text-zinc-950'
+                'ui-nav-link',
+                isActive(item.href) ? 'ui-nav-link-active' : ''
               ].join(' ')}
             >
               {item.label}
@@ -62,7 +63,7 @@ export function SiteHeader() {
                 target="_blank"
                 rel="noreferrer"
                 aria-label={item.label}
-                className="rounded-md p-2 text-zinc-500 transition-colors hover:bg-zinc-100 hover:text-zinc-950"
+                className="rounded-[6px] border border-border p-2 text-muted transition-colors hover:border-accent hover:text-accent"
               >
                 <Icon className="h-4 w-4" />
               </a>
@@ -72,7 +73,7 @@ export function SiteHeader() {
 
         <button
           type="button"
-          className="inline-flex items-center justify-center rounded-md p-2 text-zinc-700 transition-colors hover:bg-zinc-100 hover:text-zinc-950 md:hidden"
+          className="inline-flex items-center justify-center rounded-[6px] border border-border p-2 text-muted transition-colors hover:border-accent hover:text-accent md:hidden"
           aria-label={isMobileMenuOpen ? 'Close menu' : 'Open menu'}
           aria-expanded={isMobileMenuOpen}
           aria-controls="mobile-navigation"
@@ -83,7 +84,7 @@ export function SiteHeader() {
       </div>
 
       {isMobileMenuOpen ? (
-        <div id="mobile-navigation" className="border-t border-zinc-200 md:hidden">
+        <div id="mobile-navigation" className="border-t border-border bg-surface md:hidden">
           <div className="mx-auto flex max-w-6xl flex-col gap-1 px-4 py-3 sm:px-6 lg:px-8">
             {navigationItems.map((item) => (
               <Link
@@ -91,8 +92,8 @@ export function SiteHeader() {
                 href={item.href}
                 onClick={() => setIsMobileMenuOpen(false)}
                 className={[
-                  'rounded-md px-3 py-2 text-sm transition-colors',
-                  isActive(item.href) ? 'bg-zinc-100 text-zinc-950' : 'text-zinc-600 hover:bg-zinc-100 hover:text-zinc-950'
+                  'ui-nav-link block w-full px-3 py-3 text-left',
+                  isActive(item.href) ? 'ui-nav-link-active' : ''
                 ].join(' ')}
               >
                 {item.label}
@@ -110,7 +111,7 @@ export function SiteHeader() {
                     target="_blank"
                     rel="noreferrer"
                     aria-label={item.label}
-                    className="rounded-md p-2 text-zinc-500 transition-colors hover:bg-zinc-100 hover:text-zinc-950"
+                    className="rounded-[6px] border border-border p-2 text-muted transition-colors hover:border-accent hover:text-accent"
                   >
                     <Icon className="h-4 w-4" />
                   </a>

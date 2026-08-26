@@ -1,3 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+	html {
+		background: theme('colors.background');
+	}
+
+	body {
+		@apply bg-background text-primary font-sans antialiased;
+	}
+
+	h1,
+	h2,
+	h3 {
+		@apply font-display tracking-tight text-primary;
+	}
+
+	a {
+		@apply transition-colors;
+	}
+}
+
+@layer components {
+	.ui-card {
+		@apply rounded-[6px] border border-border bg-surface transition-shadow hover:shadow-[0_1px_4px_rgba(20,22,28,0.04)];
+	}
+
+	.ui-button-primary {
+		@apply inline-flex items-center justify-center rounded-[6px] border border-accent bg-accent px-5 py-3 text-sm font-medium text-surface transition-opacity hover:opacity-90;
+	}
+
+	.ui-button-secondary {
+		@apply inline-flex items-center justify-center rounded-[6px] border border-border bg-surface px-5 py-3 text-sm font-medium text-primary transition-colors hover:border-accent hover:text-accent;
+	}
+
+	.ui-pill {
+		@apply inline-flex items-center gap-1 rounded-[6px] border border-border bg-surface px-3 py-1 text-xs leading-none text-muted font-ui-mono;
+	}
+
+	.ui-pill-accent {
+		@apply text-accent;
+	}
+
+	.ui-pill-progress {
+		@apply text-status-progress;
+	}
+
+	.ui-eyebrow {
+		@apply text-xs uppercase tracking-[0.18em] text-muted font-ui-mono;
+	}
+
+	.ui-nav-link {
+		@apply relative px-2 py-2 text-sm font-medium text-muted transition-colors after:absolute after:left-2 after:right-2 after:-bottom-0.5 after:h-[2px] after:origin-left after:scale-x-0 after:bg-accent after:transition-transform;
+	}
+
+	.ui-nav-link-active {
+		@apply text-primary after:scale-x-100;
+	}
+}
