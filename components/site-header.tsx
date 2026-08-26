@@ -31,12 +31,12 @@ export function SiteHeader() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-zinc-200 bg-white/95 backdrop-blur">
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
+      <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
         <Link href="/" className="text-sm font-medium tracking-wide text-zinc-950">
           Atharva Waingankar
         </Link>
 
-        <nav className="hidden items-center gap-1 md:flex" aria-label="Primary">
+        <nav className="hidden flex-1 items-center justify-center gap-1 md:flex" aria-label="Primary">
           {navigationItems.map((item) => (
             <Link
               key={item.href}
