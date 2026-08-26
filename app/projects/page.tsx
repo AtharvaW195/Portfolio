@@ -19,12 +19,12 @@ export default function ProjectsPage() {
             className="flex h-full flex-col rounded-2xl border border-zinc-200 bg-white p-6 transition-colors hover:border-zinc-300"
           >
             <div className="space-y-4">
-              <div className="flex items-start justify-between gap-4">
+              <div className="space-y-3">
                 <div className="space-y-2">
                   <p className="text-xs font-medium tracking-[0.18em] text-zinc-500 uppercase">{project.category}</p>
                   <h2 className="text-xl font-semibold tracking-tight text-zinc-950">{project.name}</h2>
                 </div>
-                <span className="shrink-0 rounded-full border border-zinc-200 px-3 py-1 text-xs font-medium text-zinc-700">
+                <span className="inline-flex max-w-full rounded-full border border-zinc-200 px-3 py-1 text-xs font-medium leading-4 text-zinc-700 whitespace-normal break-words">
                   {project.status}
                 </span>
               </div>

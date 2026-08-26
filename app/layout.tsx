@@ -4,8 +4,20 @@ import { SiteHeader } from '@/components/site-header';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Portfolio',
-  description: 'Portfolio site placeholder description.'
+  metadataBase: new URL('https://example.com'),
+  title: 'Atharva Waingankar | Software Engineer & Researcher',
+  description: 'Atharva Waingankar builds software systems across software engineering, AI/ML, and systems, with research interests in LLMs and applied machine learning.',
+  openGraph: {
+    title: 'Atharva Waingankar | Software Engineer & Researcher',
+    description: 'Atharva Waingankar builds software systems across software engineering, AI/ML, and systems, with research interests in LLMs and applied machine learning.',
+    type: 'website',
+    locale: 'en_US',
+    url: '/',
+    siteName: 'Atharva Waingankar Portfolio'
+  },
+  icons: {
+    icon: '/favicon.ico'
+  }
 };
 
 export default function RootLayout({
@@ -21,6 +33,7 @@ export default function RootLayout({
           <main className="flex-1">{children}</main>
           <SiteFooter />
         </div>
+        {/* Replace app/favicon.ico with your final icon when ready; Next will serve it automatically. */}
       </body>
     </html>
   );
