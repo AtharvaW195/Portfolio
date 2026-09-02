@@ -28,11 +28,11 @@ export const education: EducationItem[] = [
   {
     institution: 'NC State University',
     degree: 'Master of Computer Science',
-    duration: '2026–Present'
+    duration: '2025–Present'
   },
   {
     institution: 'NMIMS MPSTME',
     degree: 'B.Tech in Information Technology',
-    duration: ''
+    duration: '2021-2025'
   }
 ];

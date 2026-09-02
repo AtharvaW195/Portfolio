@@ -19,6 +19,9 @@ export default function ResumePage() {
           <Link
             key={resume.path}
             href={resume.path}
+            target="_blank"
+            rel="noopener noreferrer"
+            download
             className="ui-card px-5 py-4 text-sm font-medium text-primary transition-colors hover:border-accent hover:text-accent"
           >
             {resume.label}
@@ -30,21 +33,20 @@ export default function ResumePage() {
         <div className="space-y-2">
           <h2 className="text-lg font-semibold tracking-tight">General Download</h2>
           <p className="text-sm leading-6 text-muted">
-            The button below currently points to the Software Engineering resume by default. Update it whenever you want a different primary resume.
+            The software engineering resume is set as the default download, while the ML resume is available in the list above.
           </p>
         </div>
 
         <Link
           href={downloadResumePath}
+          target="_blank"
+          rel="noopener noreferrer"
+          download
           className="ui-button-primary"
         >
           Download Resume
         </Link>
       </section>
-
-      <p className="text-sm leading-6 text-muted">
-        Note: these are placeholder paths for now. Drop the PDF files into public/resumes/ so the links resolve to actual files later.
-      </p>
     </main>
   );
 }

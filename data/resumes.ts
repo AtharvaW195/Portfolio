@@ -4,8 +4,6 @@ export interface ResumeEntry {
 }
 
 export const resumes: ResumeEntry[] = [
-  { label: 'Software Engineering Resume', path: '/resumes/swe-resume.pdf' },
-  { label: 'AI/ML Resume', path: '/resumes/ai-ml-resume.pdf' },
-  { label: 'Systems/Networking Resume', path: '/resumes/systems-resume.pdf' },
-  { label: 'Data/Analytics Resume', path: '/resumes/data-resume.pdf' }
+  { label: 'Software Engineering Resume', path: '/resumes/Atharva_Waingankar_Resume_SDE.pdf' },
+  { label: 'AI/ML Resume', path: '/resumes/Atharva_Waingankar_Resume_ML.pdf' }
 ];

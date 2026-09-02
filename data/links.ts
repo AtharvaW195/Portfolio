@@ -5,7 +5,7 @@ export interface ProfileLinks {
 }
 
 export const links: ProfileLinks = {
-  github: 'https://github.com/your-handle',
-  linkedin: 'https://www.linkedin.com/in/your-handle/',
-  email: 'you@example.com'
+  github: 'https://github.com/AtharvaW195',
+  linkedin: 'https://www.linkedin.com/in/atharva-waingankar/',
+  email: 'atharvawaingankar195@gmail.com'
 };
